@@ -5,7 +5,7 @@ include_once 'dbconnect.php';
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home | 保良局王賜豪(田心谷)小學 </title>
+	<title>Home | </title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" >
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
