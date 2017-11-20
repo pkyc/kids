@@ -21,26 +21,33 @@ if (isset($_POST['signup'])) {
 	//name can contain only alpha characters and space
 	if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
 		$error = true;
-		$name_error = "Name must contain only alphabets and space";
+		$name_error = "用戶名稱只能包含字母";
 	}
 	if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
 		$error = true;
-		$email_error = "Please Enter Valid Email ID";
+		$email_error = "請輸入有效的電子郵件, xxx@abc.com";
+	}
+	if(!$dob) {
+		$error = true;
+		$dob_error = "請輸入有效的出生日期, dd/mm/yyyy ";
+	}
+	if(strlen($hkid) < 0 ) {
+		$error = true;
+		$hkid_error = "請輸入有效的香港身份證號碼, a1234567";
 	}
 	if(strlen($password) < 0) {
 		$error = true;
-		$password_error = "Password must be minimum of 6 characters";
+		$password_error = "密碼必須至少為1個字符";
 	}
 	if($password != $cpassword) {
 		$error = true;
-		$cpassword_error = "Password and Confirm Password doesn't match";
+		$cpassword_error = "密碼和確認密碼不一樣";
 	}
 	if (!$error) {
-		if(mysqli_query($con, "INSERT INTO users(name,email,bday,hkid,password) VALUES('" . $name . "', '" . $email . "','" . $bday . "','" . $hkid . "','" . $password . "')")) {
-			$successmsg = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
+		if(mysqli_query($con, "INSERT INTO users(name,email,bday,hkid,password) VALUES('" . $name . "', '" . $email . "','" . $dob . "','" . $hkid . "','" . $password . "')")) {
+			$successmsg = "成功註冊! <a href='login.php'>點擊此處登錄</a>";
 		} else {
 			$errormsg = mysqli_error($con);
-			//$errormsg = "Error in registering...Please try again later!";
 		}
 	}
 }
@@ -54,74 +61,53 @@ if (isset($_POST['signup'])) {
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 </head>
 <body>
-
-<nav class="navbar navbar-default" role="navigation">
-	<div class="container-fluid">
-		<!-- add header -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="index.php">Home</a>
-		</div>
-		<!-- menu items -->
-		<div class="collapse navbar-collapse" id="navbar1">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="login.php">Login</a></li>
-				<li class="active"><a href="register.php">Sign Up</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
+<?php include('nav.php'); ?>
 
 <div class="container">
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4 well">
 			<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="signupform">
 				<fieldset>
-					<legend>Sign Up</legend>
+					<legend>注冊</legend>
 
 					<div class="form-group">
-						<label for="name">Name</label>
-						<input type="text" name="name" placeholder="Enter Full Name" required value="<?php if($error) echo $name; ?>" class="form-control" />
+						<label for="name">用戶名</label>
+						<input type="text" name="name" placeholder="你的用戶名" required value="<?php if($error) echo $name; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($name_error)) echo $name_error; ?></span>
 					</div>
 					
 					<div class="form-group">
-						<label for="name">Email</label>
-						<input type="text" name="email" placeholder="Email" required value="<?php if($error) echo $email; ?>" class="form-control" />
+						<label for="name">電子郵件</label>
+						<input type="text" name="email" placeholder="電子郵件" required value="<?php if($error) echo $email; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($email_error)) echo $email_error; ?></span>
 					</div>
 
 					<div class="form-group">
-						<label for="name">Date of Birth</label>
-						<input type="date" name="bday" placeholder="bday" class="form-control" value="2017-11-22" />
-						<span class="text-danger"><?php if (isset($email_error)) echo $email_error; ?></span>
+						<label for="name">出生日期</label>
+						<input type="date" name="dob" placeholder="dob" class="form-control" value="2017-11-22" />
+						<span class="text-danger"><?php if (isset($dob_error)) echo $dob_error; ?></span>
 					</div>
 
 					<div class="form-group">
-						<label for="name">HKID</label>
+						<label for="name">香港身份證號碼</label>
 						<input type="text" name="hkid" placeholder="a12345678" class="form-control" />
-						<span class="text-danger"><?php if (isset($email_error)) echo $email_error; ?></span>
+						<span class="text-danger"><?php if (isset($hkid_error)) echo $hkid; ?></span>
 					</div>
 
 					<div class="form-group">
-						<label for="name">Password</label>
-						<input type="password" name="password" placeholder="Password" required class="form-control" />
+						<label for="name">密碼</label>
+						<input type="password" name="password" placeholder="密碼" required class="form-control" />
 						<span class="text-danger"><?php if (isset($password_error)) echo $password_error; ?></span>
 					</div>
 
 					<div class="form-group">
-						<label for="name">Confirm Password</label>
-						<input type="password" name="cpassword" placeholder="Confirm Password" required class="form-control" />
+						<label for="name">確認密碼</label>
+						<input type="password" name="cpassword" placeholder="確認密碼" required class="form-control" />
 						<span class="text-danger"><?php if (isset($cpassword_error)) echo $cpassword_error; ?></span>
 					</div>
 
 					<div class="form-group">
-						<input type="submit" name="signup" value="Sign Up" class="btn btn-primary" />
+						<input type="submit" name="signup" value="注冊" class="btn btn-primary" />
 					</div>
 				</fieldset>
 			</form>
@@ -131,7 +117,7 @@ if (isset($_POST['signup'])) {
 	</div>
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4 text-center">	
-		Already Registered? <a href="login.php">Login Here</a>
+		已經註冊? <a href="login.php">在此登錄</a>
 		</div>
 	</div>
 </div>

@@ -19,7 +19,7 @@ if (isset($_POST['login'])) {
 		$_SESSION['usr_name'] = $row['name'];
 		header("Location: index.php");
 	} else {
-		$errormsg = "Incorrect Email or Password!!!";
+		$errormsg = "錯誤的郵箱帳號或密碼！";
 	}
 }
 ?>
@@ -33,47 +33,27 @@ if (isset($_POST['login'])) {
 </head>
 <body>
 
-<nav class="navbar navbar-default" role="navigation">
-	<div class="container-fluid">
-		<!-- add header -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="index.php">Home</a>
-		</div>
-		<!-- menu items -->
-		<div class="collapse navbar-collapse" id="navbar1">
-			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="login.php">Login</a></li>
-				<li><a href="register.php">Sign Up</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
+<?php include('nav.php'); ?>
 
 <div class="container">
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4 well">
 			<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
 				<fieldset>
-					<legend>Login</legend>
+					<legend>登錄</legend>
 					
 					<div class="form-group">
-						<label for="name">Email</label>
-						<input type="text" name="email" placeholder="Your Email" required class="form-control" />
+						<label for="name">電子郵件</label>
+						<input type="text" name="email" placeholder="你的電子郵件" required class="form-control" />
 					</div>
 
 					<div class="form-group">
-						<label for="name">Password</label>
-						<input type="password" name="password" placeholder="Your Password" required class="form-control" />
+						<label for="name">密碼</label>
+						<input type="password" name="password" placeholder="你的密碼" required class="form-control" />
 					</div>
 
 					<div class="form-group">
-						<input type="submit" name="login" value="Login" class="btn btn-primary" />
+						<input type="submit" name="login" value="登錄" class="btn btn-primary" />
 					</div>
 				</fieldset>
 			</form>
@@ -82,7 +62,7 @@ if (isset($_POST['login'])) {
 	</div>
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4 text-center">	
-		New User? <a href="register.php">Sign Up Here</a>
+		新用戶? <a href="register.php">在此註冊</a>
 		</div>
 	</div>
 </div>
