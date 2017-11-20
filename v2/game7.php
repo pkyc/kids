@@ -1,0 +1,405 @@
+<?php
+session_start();
+
+//check if form is submitted
+if (isset($_POST['submit'])) {
+	$password = $_POST['password'];
+	if ($password == "League_of_Legends") {
+		$errormsg = "<H1 style='color:red;'> YOU WIN!</h1>";
+	} else {
+		$errormsg = "<h2> Good Try! Try again!</h2>";
+		//header("Location: game5.php");
+	}
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game 7</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" >
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+</head>
+<body>
+<?php include('nav.php'); ?>
+<?php if (isset($_SESSION['usr_id'])) { ?>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 well">
+			<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
+				<fieldset>
+					<legend>Login</legend>
+					
+					<div class="form-group">
+						<label for="name">Password</label>
+						<input type="password" name="password" placeholder="Your Password" required class="form-control" />
+					</div>
+
+					<div class="form-group">
+						<input type="submit" name="submit" value="submit" class="btn btn-primary" />
+					</div>
+				</fieldset>
+
+				<span><?php if (isset($errormsg)) { echo $errormsg; } ?></span>
+			</form>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<script>
+var _0x7040=['\x3c\x73\x6d\x61\x6c\x6c\x20\x61\x6c\x69\x67\x6e\x3d\x63\x65\x6e\x74\x65\x72\x3e\x3c\x66\x6f\x6e\x74\x20\x63\x6f\x6c\x6f\x72\x3d\x27\x77\x68\x69\x74\x65\x27\x3e\x54\x68\x65\x20\x70\x61\x73\x73\x77\x6f\x72\x64\x20\x69\x73\x20\x4c\x65\x61\x67\x75\x65\x5f\x6f\x66\x5f\x4c\x65\x67\x65\x6e\x64\x73\x3c\x2f\x66\x6f\x6e\x74\x3e\x3c\x2f\x73\x6d\x61\x6c\x6c\x3e'];(function(_0x4f6018,_0x588e50){var _0x1624c1=function(_0x2ca874){while(--_0x2ca874){_0x4f6018['\x70\x75\x73\x68'](_0x4f6018['\x73\x68\x69\x66\x74']());}};_0x1624c1(++_0x588e50);}(_0x7040,0x14f));var _0x0704=function(_0x5316fd,_0x37382e){_0x5316fd=_0x5316fd-0x0;var _0x4df56c=_0x7040[_0x5316fd];return _0x4df56c;};document['\x77\x72\x69\x74\x65'](_0x0704('0x0'));
+</script>
+<?php } else { ?>
+<H1 align=center><a href="index.php">Login please!</a></H1>
+<?php } ?>
+
+
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
