@@ -1,6 +1,6 @@
 # Latest News:
-22/Nov/2017 ; round 2 ; 1 class 30 students ; completed
-23/Jun/2017 ; round 1 ; 2 classes 60 students ; completed
+###### 22/Nov/2017 ; round 2 ; 1 class 30 students ; completed
+###### 23/Jun/2017 ; round 1 ; 2 classes 60 students ; completed
 
 # Kids Security Workshop (Security workshop for Primary School student)
 
@@ -25,11 +25,11 @@ These instructions will get you a copy of the workshop and running on your envir
 
 LAMP stack. I havn't proof this with the lastest version but belivev it should not have critical problem. 
 
-This version is running on : 
-Ubuntu 16.04
-PHP 7.0.22
-Apache/2.4.18
-Mysql 5.7.20
+###### This version is running on : 
+###### Ubuntu 16.04
+###### PHP 7.0.22
+###### Apache/2.4.18
+###### Mysql 5.7.20
 
 ### Installing
 
