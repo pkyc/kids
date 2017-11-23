@@ -2,7 +2,6 @@
 22/Nov/2017 ; round 2 ; 1 class 30 students ; completed
 23/Jun/2017 ; round 1 ; 2 classes 60 students ; completed
 
-
 # Kids Security Workshop (Security workshop for Primary School student)
 
 Build up the security awareness of the kids. 
