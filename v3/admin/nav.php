@@ -1,5 +1,5 @@
 <?php
-include_once 'dbconnect.php';
+include_once '../dbconnect.php';
 ?>
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container-fluid">

@@ -3,7 +3,9 @@
 -- Host: localhost    Database: db2
 -- ------------------------------------------------------
 -- Server version       5.7.20-0ubuntu0.16.04.1
-
+DROP DATABASE IF EXISTS `db2`;
+CREATE DATABASE db2;
+USE db2;
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
@@ -38,3 +40,5 @@ CREATE TABLE `users` (
   `password` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
+
+INSERT INTO admin (`name`,`password`) VALUES ('admin','infoSec91');

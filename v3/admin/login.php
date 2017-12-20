@@ -5,7 +5,7 @@ if(isset($_SESSION['name'])!="") {
 	header("Location: index.php");
 }
 
-include_once 'dbconnect.php';
+include_once '../dbconnect.php';
 
 //check if form is submitted
 if (isset($_POST['login'])) {
