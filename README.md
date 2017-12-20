@@ -1,4 +1,5 @@
 # Latest News:
+###### bugs fixed: single dbconnect file, create default admin a/c
 ###### 22/Nov/2017 ; round 2 ; 1 class 30 students ; completed
 ###### 23/Jun/2017 ; round 1 ; 2 classes 60 students ; completed
 
