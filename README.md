@@ -38,9 +38,13 @@
 git clone https://github.com/pkyc/kids.git
 
 ```
-2. Copy the files to your web directory
+2. Pick the latest version : v3
+```
+cd kids\v3
+```
+3. Copy the files to your web directory
 
-3. Setup the mysql 
+4. Setup the mysql 
 
 
 ## Running workshop
